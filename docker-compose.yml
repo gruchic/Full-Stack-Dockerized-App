@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpass
+      MYSQL_DATABASE: testdb
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - ./pgdata:/var/lib/mysql
+    ports:
+      - "3306:3306"  # Adjust to "3307:3306" if previously changed
+    networks:
+      - project-net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - project-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - backend
+    networks:
+      - project-net
+
+networks:
+  project-net:
+    driver: bridge
+    external: true  # Reuse the existing network
