@@ -35,3 +35,9 @@ docker network create project-net
 ```bash
 docker-compose up -d --build
 ```
+### 5. Adding Jenkins
+Jenkins should be setup in you local.Make Your local expose to internet using ngrok.Add the webhook in the project
+```
+ngrok http 8080
+
+```
