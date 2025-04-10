@@ -4,14 +4,14 @@ pipeline {
         stage('Build Backend') {
             steps {
                 dir('backend') {
-                    sh 'docker build -t backend-app:latest .'
+                    sh 'docker build -t backend-app:latest Dockerfile.backend'
                 }
             }
         }
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'docker build -t frontend-app:latest .'
+                    sh 'docker build -t frontend-app:latest Dockerfile.frontend'
                 }
             }
         }
