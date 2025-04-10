@@ -14,7 +14,7 @@ The services communicate over a custom Docker network (`project-net`), and data 
 - **Node.js**: Required locally for backend development (optional for deployment).
 - **Operating System**: Linux, macOS, or Windows with WSL2 recommended.
 
-## Setup Instruction
+## Setup Instructions
 
 ### 1. Clone or Prepare the Project
 Ensure the project directory (`full-stack-docker`) contains the necessary files. If cloning from a repository, run:
