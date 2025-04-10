@@ -22,7 +22,7 @@ Ensure the project directory (`full-stack-docker`) contains the necessary files.
 git clone "https://github.com/gruchic/Full-Stack-Dockerized-App.git"
 cd full-stack-docker
 ```
-### 2. Installing the Necessay Package
+### 2. Installing the Necessay Packages
 ```bash
 cd backend
 npm install
