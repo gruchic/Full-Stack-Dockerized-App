@@ -10,7 +10,7 @@ services:
     volumes:
       - ./pgdata:/var/lib/mysql
     ports:
-      - "3306:3306"  # Adjust to "3307:3306" if previously changed
+      - "3306:3306"  
     networks:
       - project-net
 
@@ -41,4 +41,4 @@ services:
 networks:
   project-net:
     driver: bridge
-    external: true  # Reuse the existing network
+    external: true  
