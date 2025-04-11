@@ -27,7 +27,7 @@ cd full-stack-docker
 cd backend
 npm install
 ```
-### 3. Creating the Nectwork
+### 3. Creating the Network
 ```bash
 docker network create project-net
 ```
